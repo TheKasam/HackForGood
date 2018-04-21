@@ -12,6 +12,10 @@
 		733D43E4208BD12D0023DB1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733D43E3208BD12D0023DB1A /* Assets.xcassets */; };
 		733D43E7208BD12D0023DB1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733D43E5208BD12D0023DB1A /* LaunchScreen.storyboard */; };
 		74AB8FAA7C525273E77FB48C /* Pods_HackForGoodSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */; };
+		D80AE924208BDE0700D9257E /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AE923208BDE0700D9257E /* signupViewController.swift */; };
+		D80AE926208BE15A00D9257E /* adminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AE925208BE15A00D9257E /* adminViewController.swift */; };
+		D80AE928208BE16100D9257E /* memberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AE927208BE16100D9257E /* memberViewController.swift */; };
+		D80AE930208BE6F900D9257E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D80AE92F208BE6F900D9257E /* GoogleService-Info.plist */; };
 		D8B6911D208BD6E600F79B54 /* signinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6911C208BD6E600F79B54 /* signinViewController.swift */; };
 		D8D2A965208BD2BF004028FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D2A964208BD2BF004028FE /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -26,6 +30,10 @@
 		733D43E8208BD12E0023DB1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackForGoodSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8617FF2768A925664FDB72 /* Pods-HackForGoodSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackForGoodSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		D80AE923208BDE0700D9257E /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
+		D80AE925208BE15A00D9257E /* adminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminViewController.swift; sourceTree = "<group>"; };
+		D80AE927208BE16100D9257E /* memberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberViewController.swift; sourceTree = "<group>"; };
+		D80AE92F208BE6F900D9257E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D8B6911C208BD6E600F79B54 /* signinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signinViewController.swift; sourceTree = "<group>"; };
 		D8D2A964208BD2BF004028FE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,10 +83,14 @@
 				733D43DC208BD12C0023DB1A /* AppDelegate.swift */,
 				733D43DE208BD12C0023DB1A /* ViewController.swift */,
 				D8D2A964208BD2BF004028FE /* Main.storyboard */,
+				D80AE923208BDE0700D9257E /* signupViewController.swift */,
+				D80AE925208BE15A00D9257E /* adminViewController.swift */,
+				D80AE927208BE16100D9257E /* memberViewController.swift */,
 				D8B6911C208BD6E600F79B54 /* signinViewController.swift */,
 				733D43E3208BD12D0023DB1A /* Assets.xcassets */,
 				733D43E5208BD12D0023DB1A /* LaunchScreen.storyboard */,
 				733D43E8208BD12E0023DB1A /* Info.plist */,
+				D80AE92F208BE6F900D9257E /* GoogleService-Info.plist */,
 			);
 			path = HackForGoodSwift;
 			sourceTree = "<group>";
@@ -152,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8D2A965208BD2BF004028FE /* Main.storyboard in Resources */,
+				D80AE930208BE6F900D9257E /* GoogleService-Info.plist in Resources */,
 				733D43E7208BD12D0023DB1A /* LaunchScreen.storyboard in Resources */,
 				733D43E4208BD12D0023DB1A /* Assets.xcassets in Resources */,
 			);
@@ -185,12 +198,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +224,10 @@
 			files = (
 				D8B6911D208BD6E600F79B54 /* signinViewController.swift in Sources */,
 				733D43DF208BD12C0023DB1A /* ViewController.swift in Sources */,
+				D80AE924208BDE0700D9257E /* signupViewController.swift in Sources */,
 				733D43DD208BD12C0023DB1A /* AppDelegate.swift in Sources */,
+				D80AE928208BE16100D9257E /* memberViewController.swift in Sources */,
+				D80AE926208BE15A00D9257E /* adminViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

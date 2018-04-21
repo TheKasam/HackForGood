@@ -12,9 +12,6 @@ import FirebaseDatabase
 
 
 class signinViewController: UIViewController  {
-    
-    
-   
    
     @IBOutlet weak var signInEmail: UITextField!
     @IBOutlet weak var signInPassword: UITextField!
@@ -40,10 +37,17 @@ class signinViewController: UIViewController  {
     @IBAction func signinFire(_ sender: Any) {
         Auth.auth().signIn(withEmail: signInEmail.text!, password: signInPassword.text!) { (user, error) in
             if user?.uid != nil {
-                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let newViewController = storyBoard.instantiateViewController(withIdentifier: "groceries") as! GTableViewController
-                self.present(newViewController, animated: true)
-                print(user?.uid)
+                if self.signInEmail.text! == "sealAdmin@gmail.com"{
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "adminView") as! adminViewController
+                    self.present(newViewController, animated: true)
+                    print(user?.uid)
+                } else {
+                    let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "memberView") as! memberViewController
+                    self.present(newViewController, animated: true)
+                    print(user?.uid)
+                }
             }
             else{
                 self.errorLabel.text = "email or password incorrect"
