@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		733D43DD208BD12C0023DB1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733D43DC208BD12C0023DB1A /* AppDelegate.swift */; };
 		733D43DF208BD12C0023DB1A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733D43DE208BD12C0023DB1A /* ViewController.swift */; };
-		733D43E2208BD12D0023DB1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733D43E0208BD12D0023DB1A /* Main.storyboard */; };
 		733D43E4208BD12D0023DB1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733D43E3208BD12D0023DB1A /* Assets.xcassets */; };
 		733D43E7208BD12D0023DB1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733D43E5208BD12D0023DB1A /* LaunchScreen.storyboard */; };
 		74AB8FAA7C525273E77FB48C /* Pods_HackForGoodSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */; };
+		D8D2A965208BD2BF004028FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D2A964208BD2BF004028FE /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +20,12 @@
 		733D43D9208BD12C0023DB1A /* HackForGoodSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackForGoodSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733D43DC208BD12C0023DB1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		733D43DE208BD12C0023DB1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		733D43E1208BD12D0023DB1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		733D43E3208BD12D0023DB1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		733D43E6208BD12D0023DB1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		733D43E8208BD12E0023DB1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackForGoodSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8617FF2768A925664FDB72 /* Pods-HackForGoodSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackForGoodSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		D8D2A964208BD2BF004028FE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 			children = (
 				733D43DC208BD12C0023DB1A /* AppDelegate.swift */,
 				733D43DE208BD12C0023DB1A /* ViewController.swift */,
-				733D43E0208BD12D0023DB1A /* Main.storyboard */,
+				D8D2A964208BD2BF004028FE /* Main.storyboard */,
 				733D43E3208BD12D0023DB1A /* Assets.xcassets */,
 				733D43E5208BD12D0023DB1A /* LaunchScreen.storyboard */,
 				733D43E8208BD12E0023DB1A /* Info.plist */,
@@ -149,9 +149,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8D2A965208BD2BF004028FE /* Main.storyboard in Resources */,
 				733D43E7208BD12D0023DB1A /* LaunchScreen.storyboard in Resources */,
 				733D43E4208BD12D0023DB1A /* Assets.xcassets in Resources */,
-				733D43E2208BD12D0023DB1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,14 +221,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		733D43E0208BD12D0023DB1A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				733D43E1208BD12D0023DB1A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		733D43E5208BD12D0023DB1A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -362,7 +354,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VRANT523UE;
 				INFOPLIST_FILE = HackForGoodSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.devhandles.HackForGoodSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -378,7 +373,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VRANT523UE;
 				INFOPLIST_FILE = HackForGoodSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.devhandles.HackForGoodSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
