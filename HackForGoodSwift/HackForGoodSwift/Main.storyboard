@@ -35,17 +35,11 @@
                                 <rect key="frame" x="161" y="196" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Admin"/>
-                                <connections>
-                                    <segue destination="n3e-N2-rjV" kind="show" id="apX-Qo-bdc"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JP-Ht-fPX">
                                 <rect key="frame" x="156" y="261" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Member"/>
-                                <connections>
-                                    <segue destination="uJY-5e-w4C" kind="show" id="lAX-Ba-sJs"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -77,11 +71,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Events" id="NhH-cs-KpF">
-                                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="lxy-bV-wDt">
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" identifier="memberSignOut" id="0xd-C7-8IU"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="lxy-bV-wDt"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -205,11 +195,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Admin-Events" id="g1L-7d-Nzs">
-                                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="cYN-YV-Fzl">
-                                            <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" identifier="SignOut" id="el8-SY-3H4"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="cYN-YV-Fzl"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -281,8 +267,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="apX-Qo-bdc"/>
-        <segue reference="lAX-Ba-sJs"/>
-        <segue reference="0xd-C7-8IU"/>
+        <segue reference="mQi-a5-VQa"/>
+        <segue reference="G9i-T1-oVT"/>
     </inferredMetricsTieBreakers>
 </document>

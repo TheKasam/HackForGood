@@ -6,5 +6,5 @@ target 'HackForGoodSwift' do
   use_frameworks!
 
   # Pods for HackForGoodSwift
-
+  pod 'Firebase/Core'
 end

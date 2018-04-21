@@ -12,6 +12,7 @@
 		733D43E4208BD12D0023DB1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733D43E3208BD12D0023DB1A /* Assets.xcassets */; };
 		733D43E7208BD12D0023DB1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733D43E5208BD12D0023DB1A /* LaunchScreen.storyboard */; };
 		74AB8FAA7C525273E77FB48C /* Pods_HackForGoodSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */; };
+		D8B6911D208BD6E600F79B54 /* signinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B6911C208BD6E600F79B54 /* signinViewController.swift */; };
 		D8D2A965208BD2BF004028FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8D2A964208BD2BF004028FE /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		733D43E8208BD12E0023DB1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackForGoodSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8617FF2768A925664FDB72 /* Pods-HackForGoodSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackForGoodSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		D8B6911C208BD6E600F79B54 /* signinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signinViewController.swift; sourceTree = "<group>"; };
 		D8D2A964208BD2BF004028FE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 				733D43DC208BD12C0023DB1A /* AppDelegate.swift */,
 				733D43DE208BD12C0023DB1A /* ViewController.swift */,
 				D8D2A964208BD2BF004028FE /* Main.storyboard */,
+				D8B6911C208BD6E600F79B54 /* signinViewController.swift */,
 				733D43E3208BD12D0023DB1A /* Assets.xcassets */,
 				733D43E5208BD12D0023DB1A /* LaunchScreen.storyboard */,
 				733D43E8208BD12E0023DB1A /* Info.plist */,
@@ -100,7 +103,6 @@
 				733D43D6208BD12C0023DB1A /* Frameworks */,
 				733D43D7208BD12C0023DB1A /* Resources */,
 				708CA7A6BAE746A55F0CC349 /* [CP] Embed Pods Frameworks */,
-				7779B1CDF8D381CEFE0A0DB8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,28 +184,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7779B1CDF8D381CEFE0A0DB8 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -213,6 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B6911D208BD6E600F79B54 /* signinViewController.swift in Sources */,
 				733D43DF208BD12C0023DB1A /* ViewController.swift in Sources */,
 				733D43DD208BD12C0023DB1A /* AppDelegate.swift in Sources */,
 			);
