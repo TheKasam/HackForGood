@@ -12,9 +12,11 @@
 		733D43E2208BD12D0023DB1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733D43E0208BD12D0023DB1A /* Main.storyboard */; };
 		733D43E4208BD12D0023DB1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 733D43E3208BD12D0023DB1A /* Assets.xcassets */; };
 		733D43E7208BD12D0023DB1A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 733D43E5208BD12D0023DB1A /* LaunchScreen.storyboard */; };
+		74AB8FAA7C525273E77FB48C /* Pods_HackForGoodSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		322091B565AED54647F7C836 /* Pods-HackForGoodSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackForGoodSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift.release.xcconfig"; sourceTree = "<group>"; };
 		733D43D9208BD12C0023DB1A /* HackForGoodSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackForGoodSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		733D43DC208BD12C0023DB1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		733D43DE208BD12C0023DB1A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		733D43E3208BD12D0023DB1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		733D43E6208BD12D0023DB1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		733D43E8208BD12E0023DB1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackForGoodSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F8617FF2768A925664FDB72 /* Pods-HackForGoodSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackForGoodSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74AB8FAA7C525273E77FB48C /* Pods_HackForGoodSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033CE0855751FE0706C70A17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9F8617FF2768A925664FDB72 /* Pods-HackForGoodSwift.debug.xcconfig */,
+				322091B565AED54647F7C836 /* Pods-HackForGoodSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		733D43D0208BD12C0023DB1A = {
 			isa = PBXGroup;
 			children = (
 				733D43DB208BD12C0023DB1A /* HackForGoodSwift */,
 				733D43DA208BD12C0023DB1A /* Products */,
+				033CE0855751FE0706C70A17 /* Pods */,
+				8A55DB0397F64481630ACFC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = HackForGoodSwift;
 			sourceTree = "<group>";
 		};
+		8A55DB0397F64481630ACFC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 733D43EB208BD12E0023DB1A /* Build configuration list for PBXNativeTarget "HackForGoodSwift" */;
 			buildPhases = (
+				3F331B53570B5343A2DF98AA /* [CP] Check Pods Manifest.lock */,
 				733D43D5208BD12C0023DB1A /* Sources */,
 				733D43D6208BD12C0023DB1A /* Frameworks */,
 				733D43D7208BD12C0023DB1A /* Resources */,
+				708CA7A6BAE746A55F0CC349 /* [CP] Embed Pods Frameworks */,
+				7779B1CDF8D381CEFE0A0DB8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F331B53570B5343A2DF98AA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackForGoodSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		708CA7A6BAE746A55F0CC349 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7779B1CDF8D381CEFE0A0DB8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		733D43D5208BD12C0023DB1A /* Sources */ = {
@@ -278,15 +356,13 @@
 		};
 		733D43EC208BD12E0023DB1A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F8617FF2768A925664FDB72 /* Pods-HackForGoodSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VRANT523UE;
 				INFOPLIST_FILE = HackForGoodSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devhandles.HackForGoodSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -296,15 +372,13 @@
 		};
 		733D43ED208BD12E0023DB1A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 322091B565AED54647F7C836 /* Pods-HackForGoodSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VRANT523UE;
 				INFOPLIST_FILE = HackForGoodSwift/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devhandles.HackForGoodSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

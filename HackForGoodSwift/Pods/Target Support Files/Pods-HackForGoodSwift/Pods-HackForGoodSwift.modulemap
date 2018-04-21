@@ -1,0 +1,6 @@
+framework module Pods_HackForGoodSwift {
+  umbrella header "Pods-HackForGoodSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
