@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.80000000000000004" y="31.03448275862069"/>
+            <point key="canvasLocation" x="-487" y="75"/>
         </scene>
         <!--Member View Controller-->
         <scene sceneID="JYx-ab-zcM">
@@ -265,10 +265,10 @@
             </objects>
             <point key="canvasLocation" x="1885.5999999999999" y="-694.00299850074964"/>
         </scene>
-        <!--View Controller-->
+        <!--Signin View Controller-->
         <scene sceneID="7j5-Rd-tSb">
             <objects>
-                <viewController id="rD3-mY-1zf" customClass="ViewController" customModule="SealUI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rD3-mY-1zf" customClass="signinViewController" customModule="HackForGoodSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F7j-SI-Hdg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,6 +294,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="signInEmail:" destination="r6G-MG-lug" eventType="editingDidEnd" id="Zuj-XR-5wt"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDr-Zn-tZY">
                                 <rect key="frame" x="36" y="453" width="73" height="21"/>
@@ -317,20 +320,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TeL-eE-Rh9">
-                                <rect key="frame" x="155" y="582" width="46" height="30"/>
+                                <rect key="frame" x="157" y="582" width="43" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.58657962330000002" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="SignIn"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhu-ld-bvs">
+                                <rect key="frame" x="168" y="531" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.79730015990000003" green="0.31085669989999998" blue="0.25878784059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <viewLayoutGuide key="safeArea" id="4jq-iL-lT8"/>
                     </view>
                     <connections>
+                        <outlet property="errorLabel" destination="Nhu-ld-bvs" id="u6q-EG-Q6g"/>
+                        <outlet property="signInEmail" destination="WSK-3b-SMY" id="h0r-CY-jgH"/>
+                        <outlet property="signInPassword" destination="oqh-6t-01V" id="ren-bb-Mnr"/>
+                        <outlet property="signin" destination="TeL-eE-Rh9" id="xoW-4u-SK0"/>
                         <outlet property="tedtFeild" destination="WSK-3b-SMY" id="re6-vh-PWI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udk-xb-Fvm" sceneMemberID="firstResponder"/>
+                <exit id="r6G-MG-lug" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
