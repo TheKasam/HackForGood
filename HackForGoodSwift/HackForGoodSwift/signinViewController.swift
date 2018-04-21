@@ -39,7 +39,7 @@ class signinViewController: UIViewController  {
             if user?.uid != nil {
                 if self.signInEmail.text! == "sealAdmin@gmail.com"{
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "adminView") as! adminViewController
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "adminView")
                     self.present(newViewController, animated: true)
                     print(user?.uid)
                 } else {

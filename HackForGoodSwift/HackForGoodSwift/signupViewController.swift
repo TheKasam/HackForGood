@@ -43,7 +43,7 @@ class signupViewController: UIViewController {
                 if self.signupEmail.text! == "sealAdmin@gmail.com"{
                     self.ref.child("users").child((user?.uid)!).setValue(["name": self.signupName.text])
                         let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "adminView") as! adminViewController
+                        let newViewController = storyBoard.instantiateViewController(withIdentifier: "adminView") as! tableViewViewController
                         self.present(newViewController, animated: true)
                         print(user?.uid)
                     } else {
