@@ -274,6 +274,9 @@
                         <viewLayoutGuide key="safeArea" id="KSy-DN-AzN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="PxL-qP-CjE"/>
+                    <connections>
+                        <outlet property="tableView" destination="rpl-gv-0T9" id="dlk-tV-5tD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opi-et-ouu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -303,8 +306,8 @@
                                                     <rect key="frame" x="275" y="9" width="25" height="25"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ode-TF-R9M">
-                                                    <rect key="frame" x="126" y="11" width="63" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8:00 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ode-TF-R9M">
+                                                    <rect key="frame" x="53" y="11" width="136" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -332,6 +335,7 @@
                                 </state>
                                 <connections>
                                     <action selector="confirmEvent:" destination="Iyt-bl-huk" eventType="touchUpInside" id="gXA-ag-4Hw"/>
+                                    <segue destination="AgS-GP-8ub" kind="show" id="t52-J3-e0s"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Event Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lua-w2-rtJ">
@@ -362,7 +366,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="hKZ-Rw-KuO">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Event Name" textAlignment="natural" minimumFontSize="17" id="84v-Hd-C5s">
+                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="event1" placeholder="Enter Event Name" textAlignment="natural" minimumFontSize="17" id="84v-Hd-C5s">
                             <rect key="frame" x="127.5" y="13.5" width="120" height="17"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <nil key="textColor"/>
@@ -379,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8PR-m5-sWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2610" y="-634"/>
+            <point key="canvasLocation" x="2608.8000000000002" y="-634.632683658171"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eYG-EF-f0h">
@@ -402,7 +406,7 @@
         <!--Events-->
         <scene sceneID="nnD-n2-bbn">
             <objects>
-                <viewController storyboardIdentifier="memberView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KHc-QM-LoV" customClass="memberViewController" customModule="HackForGoodSwift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="KHc-QM-LoV" customClass="memberViewController" customModule="HackForGoodSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eYk-4X-TyF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -412,7 +416,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="admin1" id="Pgh-yR-JZP" customClass="adminPageOneTableViewCell" customModule="HackForGoodSwift" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="admin4" id="Pgh-yR-JZP" customClass="memberTableViewCell1" customModule="HackForGoodSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="315" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Pgh-yR-JZP" id="YNq-Fq-rpk" customClass="adminPageOneTableViewCell" customModule="HackForGoodSwift" customModuleProvider="target">
@@ -430,10 +434,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jG3-0x-uBI">
+                                                    <rect key="frame" x="130" y="11" width="55" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="eventName" destination="ZX4-oS-Ifx" id="zkP-TQ-uWv"/>
+                                            <outlet property="eventName" destination="jG3-0x-uBI" id="hy3-gN-pBZ"/>
+                                            <segue destination="Yd4-To-u5P" kind="show" identifier="segue1" id="Dyf-q2-n5j"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -442,13 +454,14 @@
                                     <outlet property="delegate" destination="KHc-QM-LoV" id="6dd-gH-lzS"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mi-cC-Qpd">
-                                <rect key="frame" x="126" y="534" width="123" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yAq-gV-JDR">
+                                <rect key="frame" x="43" y="585" width="302" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Sign Up For Event"/>
-                                <connections>
-                                    <segue destination="Yd4-To-u5P" kind="show" id="4Vu-yc-kNg"/>
-                                </connections>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="0.58657962330000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="SignUp For Event">
+                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.79730015990000003" green="0.31085669989999998" blue="0.25878784059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -461,22 +474,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="reM-sC-MMM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1848.8" y="55.322338830584712"/>
+            <point key="canvasLocation" x="1849" y="55"/>
         </scene>
-        <!--View Controller-->
+        <!--Admin View Controller-->
         <scene sceneID="qfx-Uk-d2c">
             <objects>
-                <viewController id="Yd4-To-u5P" sceneMemberID="viewController">
+                <viewController id="Yd4-To-u5P" customClass="adminViewController" customModule="HackForGoodSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZIH-p2-xyJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fwQ-hD-h3O">
-                                <rect key="frame" x="30" y="142" width="315" height="330"/>
+                                <rect key="frame" x="30" y="96" width="315" height="376"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="admin3" id="Dfo-ED-r7L" customClass="adminTwoTableViewCell" customModule="HackForGoodSwift" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="admin3" id="Dfo-ED-r7L" customClass="finalCell" customModule="HackForGoodSwift" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="315" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dfo-ED-r7L" id="Qgo-yH-CAR">
@@ -484,7 +497,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zm0-1F-GDg">
-                                                    <rect key="frame" x="126" y="11" width="63" height="21"/>
+                                                    <rect key="frame" x="51" y="11" width="138" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -498,7 +511,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="timeLabel" destination="Zm0-1F-GDg" id="3P0-X2-Eh0"/>
+                                            <outlet property="timeLabel" destination="Zm0-1F-GDg" id="KQS-nv-LqX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -519,13 +532,6 @@
                                     <action selector="confirmEvent:" destination="Yd4-To-u5P" eventType="touchUpInside" id="7H5-TG-oRB"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Event Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="162-BM-6NP">
-                                <rect key="frame" x="116" y="83" width="154" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lyx-AQ-KIK">
                                 <rect key="frame" x="136" y="554" width="103" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -541,23 +547,32 @@
                     </view>
                     <navigationItem key="navigationItem" id="g6n-K1-6Oj">
                         <nil key="title"/>
-                        <textField key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Event Name" textAlignment="natural" minimumFontSize="17" id="IqY-sB-7he">
-                            <rect key="frame" x="127.5" y="13.5" width="120" height="17"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <nil key="textColor"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
                     </navigationItem>
                     <connections>
-                        <outlet property="eventDesc" destination="162-BM-6NP" id="hw5-Ce-zDu"/>
-                        <outlet property="eventName" destination="IqY-sB-7he" id="t9q-kv-rnB"/>
-                        <outlet property="tableView" destination="fwQ-hD-h3O" id="0oy-ue-wsJ"/>
+                        <outlet property="tableView" destination="fwQ-hD-h3O" id="0Va-he-AbE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4v-l0-gg9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2608.8000000000002" y="55.322338830584712"/>
+            <point key="canvasLocation" x="2608.8000000000002" y="53.523238380809602"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="t3X-86-8hG">
+            <objects>
+                <navigationController storyboardIdentifier="memberView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vzQ-zx-e52" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6GL-vJ-glS">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KHc-QM-LoV" kind="relationship" relationship="rootViewController" id="jPP-aL-gtm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ly-P6-vtt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="55"/>
         </scene>
     </scenes>
     <resources>
@@ -565,4 +580,7 @@
         <image name="infoDetail1" width="25" height="25"/>
         <image name="sealLogo" width="281" height="372"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="t52-J3-e0s"/>
+    </inferredMetricsTieBreakers>
 </document>

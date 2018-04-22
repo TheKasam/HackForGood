@@ -15,6 +15,8 @@
 		73E15FF0208BEC9A00AE1A36 /* adminPageOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E15FEF208BEC9A00AE1A36 /* adminPageOneTableViewCell.swift */; };
 		73E15FF2208BED5D00AE1A36 /* adminTableViewTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E15FF1208BED5D00AE1A36 /* adminTableViewTwoViewController.swift */; };
 		73E15FF4208BF07100AE1A36 /* adminTwoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E15FF3208BF07100AE1A36 /* adminTwoTableViewCell.swift */; };
+		73E15FF6208BFF1100AE1A36 /* memberTableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E15FF5208BFF1100AE1A36 /* memberTableViewCell1.swift */; };
+		73E15FF8208C080A00AE1A36 /* finalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E15FF7208C080A00AE1A36 /* finalCell.swift */; };
 		74AB8FAA7C525273E77FB48C /* Pods_HackForGoodSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */; };
 		D80AE924208BDE0700D9257E /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AE923208BDE0700D9257E /* signupViewController.swift */; };
 		D80AE926208BE15A00D9257E /* adminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AE925208BE15A00D9257E /* adminViewController.swift */; };
@@ -36,6 +38,8 @@
 		73E15FEF208BEC9A00AE1A36 /* adminPageOneTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = adminPageOneTableViewCell.swift; sourceTree = "<group>"; };
 		73E15FF1208BED5D00AE1A36 /* adminTableViewTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminTableViewTwoViewController.swift; sourceTree = "<group>"; };
 		73E15FF3208BF07100AE1A36 /* adminTwoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminTwoTableViewCell.swift; sourceTree = "<group>"; };
+		73E15FF5208BFF1100AE1A36 /* memberTableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memberTableViewCell1.swift; sourceTree = "<group>"; };
+		73E15FF7208C080A00AE1A36 /* finalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalCell.swift; sourceTree = "<group>"; };
 		7E2FC415EEC624F15330F79D /* Pods_HackForGoodSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackForGoodSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F8617FF2768A925664FDB72 /* Pods-HackForGoodSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackForGoodSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HackForGoodSwift/Pods-HackForGoodSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		D80AE923208BDE0700D9257E /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
@@ -92,8 +96,6 @@
 				733D43DE208BD12C0023DB1A /* ViewController.swift */,
 				D8D2A964208BD2BF004028FE /* Main.storyboard */,
 				D80AE923208BDE0700D9257E /* signupViewController.swift */,
-				D80AE925208BE15A00D9257E /* adminViewController.swift */,
-				D80AE927208BE16100D9257E /* memberViewController.swift */,
 				D8B6911C208BD6E600F79B54 /* signinViewController.swift */,
 				733D43E3208BD12D0023DB1A /* Assets.xcassets */,
 				733D43E5208BD12D0023DB1A /* LaunchScreen.storyboard */,
@@ -101,8 +103,12 @@
 				73E15FEF208BEC9A00AE1A36 /* adminPageOneTableViewCell.swift */,
 				73E15FF1208BED5D00AE1A36 /* adminTableViewTwoViewController.swift */,
 				73E15FED208BEC9500AE1A36 /* tableViewViewController.swift */,
-				D80AE92F208BE6F900D9257E /* GoogleService-Info.plist */,
 				73E15FF3208BF07100AE1A36 /* adminTwoTableViewCell.swift */,
+				D80AE927208BE16100D9257E /* memberViewController.swift */,
+				D80AE925208BE15A00D9257E /* adminViewController.swift */,
+				D80AE92F208BE6F900D9257E /* GoogleService-Info.plist */,
+				73E15FF5208BFF1100AE1A36 /* memberTableViewCell1.swift */,
+				73E15FF7208C080A00AE1A36 /* finalCell.swift */,
 			);
 			path = HackForGoodSwift;
 			sourceTree = "<group>";
@@ -238,10 +244,12 @@
 				D8B6911D208BD6E600F79B54 /* signinViewController.swift in Sources */,
 				73E15FF4208BF07100AE1A36 /* adminTwoTableViewCell.swift in Sources */,
 				733D43DF208BD12C0023DB1A /* ViewController.swift in Sources */,
+				73E15FF8208C080A00AE1A36 /* finalCell.swift in Sources */,
 				D80AE924208BDE0700D9257E /* signupViewController.swift in Sources */,
 				733D43DD208BD12C0023DB1A /* AppDelegate.swift in Sources */,
 				73E15FF0208BEC9A00AE1A36 /* adminPageOneTableViewCell.swift in Sources */,
 				D80AE928208BE16100D9257E /* memberViewController.swift in Sources */,
+				73E15FF6208BFF1100AE1A36 /* memberTableViewCell1.swift in Sources */,
 				D80AE926208BE15A00D9257E /* adminViewController.swift in Sources */,
 				73E15FF2208BED5D00AE1A36 /* adminTableViewTwoViewController.swift in Sources */,
 			);

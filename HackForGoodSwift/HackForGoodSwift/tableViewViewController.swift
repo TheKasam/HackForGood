@@ -7,21 +7,39 @@
 //
 
 import UIKit
+import Firebase
 
 class tableViewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var groceryList: [String] = []
+    
+    @IBOutlet weak var tableView: UITableView!
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return groceryList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "admin1", for: indexPath) as! adminPageOneTableViewCell
+        
+        cell.eventName.text = groceryList[indexPath.row]
         return cell
     }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        let databaseRef = Database.database().reference().child("AllEventNames")
+        databaseRef.observe(.value, with: {snapshot in
+            var newItems = [String]()
+            let groceries = snapshot.value as? [String : AnyObject] ?? [:]
+            for i in groceries {
+                newItems.append(i.value as! String)
+            }
+            
+            self.groceryList = newItems
+            self.tableView.reloadData()
+        })
 
         // Do any additional setup after loading the view.
     }

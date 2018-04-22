@@ -44,7 +44,7 @@ class signinViewController: UIViewController  {
                     print(user?.uid)
                 } else {
                     let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "memberView") as! memberViewController
+                    let newViewController = storyBoard.instantiateViewController(withIdentifier: "memberView")
                     self.present(newViewController, animated: true)
                     print(user?.uid)
                 }

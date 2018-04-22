@@ -22,7 +22,9 @@ class adminTableViewTwoViewController: UIViewController, UITableViewDataSource, 
     var groceryList: [String] = []
 
     @IBAction func confirmEvent(_ sender: Any) {
-        
+        let databaseRef = Database.database().reference().child("AllEventNames")
+        var list = databaseRef.childByAutoId()
+        list.setValue(eventName.text!)
     }
     
     @IBAction func addTime(_ sender: Any) {
@@ -36,6 +38,7 @@ class adminTableViewTwoViewController: UIViewController, UITableViewDataSource, 
         databaseRef.observe(.value, with: {snapshot in
             var newItems = [String]()
             let groceries = snapshot.value as? [String : AnyObject] ?? [:]
+            
             for i in groceries {
                 newItems.append(i.value as! String)
             }

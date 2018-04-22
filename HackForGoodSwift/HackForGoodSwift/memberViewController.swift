@@ -19,7 +19,7 @@ class memberViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        let databaseRef = Database.database().reference().child("AllEvents").child("event1").child("timeList")
+        let databaseRef = Database.database().reference().child("AllEventNames")
         databaseRef.observe(.value, with: {snapshot in
             var newItems = [String]()
             let groceries = snapshot.value as? [String : AnyObject] ?? [:]
@@ -42,8 +42,8 @@ class memberViewController: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "admin2", for: indexPath) as! adminTwoTableViewCell
-        cell.timeLabel.text = groceryList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "admin4", for: indexPath) as! memberTableViewCell1
+        cell.eventName.text = groceryList[indexPath.row]
         return cell
     }
     override func didReceiveMemoryWarning() {
@@ -52,14 +52,27 @@ class memberViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
+        if let destinationVC = segue.destination as? adminViewController{
+            
+            
+            guard let indexPath = tableView.indexPath(for: sender as! UITableViewCell) else {
+                print("count get index path")
+                return
+            }
+            
+            destinationVC.eventName = groceryList[indexPath.row]
+            
+        }
+        
+        
      }
-     */
+    
 
 }
